@@ -40,6 +40,7 @@ $routes->get('/', 'Login::index');
 $routes->get('/login', 'Login::index');
 $routes->post('/auth', 'Login::auth');
 $routes->get('/logout', 'Login::logout');
+$routes->get('/home', 'Home::index', ['filter' => 'auth']); //filter home page from unauthorize access
 
 /*
  * --------------------------------------------------------------------

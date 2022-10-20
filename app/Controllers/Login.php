@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\Access_model;
+use App\Models\Role_Model;
 
 class Login extends Controller
 {
@@ -13,7 +13,6 @@ class Login extends Controller
         if ($session->logged_in == true) {
             return redirect()->to('/home');
         }
-        // helper(['form']);
         echo view('login');
     }
 
@@ -28,9 +27,8 @@ class Login extends Controller
         try {
             $response = $client->request("POST", "https://disruptivetech.unisza.edu.my/api/common/v1/auth/login", ['json' => ['username' => $username, "password" => $password],]);
             $jsondata = json_decode($response->getBody());
-            $model = new Access_model(); //connect model access utk dptkan lvl access
+            $model = new Role_Model(); //connect model access utk dptkan lvl access
             $data = $model->getEmail($username);
-
 
             if ($data) { //jika ada access dlm table access
                 $session = session();
