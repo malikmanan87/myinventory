@@ -189,7 +189,7 @@
       <!-- Brand Logo -->
       <a href="<?= base_url() ?>" class="brand-link">
         <img src="<?= base_url() ?>/media/pc.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">MyTask</span><sup>Beta</sup>
+        <span class="brand-text font-weight-light">MyInventory</span><sup>Beta</sup>
       </a>
 
       <!-- Sidebar -->
@@ -213,7 +213,7 @@
                 <li class="nav-item">
                   <a href="<?= base_url("/new") ?>" class="nav-link">
                     <i class="nav-icon fas fa-edit"></i>
-                    <p>+ New Ticket</p>
+                    <p>+ Asset Reg</p>
                     <span class="right badge badge-warning">New</span>
                   </a>
                 </li>
@@ -221,44 +221,7 @@
                 <li class="nav-item">
                   <a href="<?= base_url("/techreport") ?>" class="nav-link">
                     <i class="nav-icon fas fa-chart-pie" aria-hidden="true"></i>
-                    <p>My Report</p>
-                  </a>
-                </li>
-                <?php
-                $session = session();
-                if ($session->access == '3') { ?>
-                  <li class="nav-item">
-                    <a href="<?= base_url("/allreport") ?>" class="nav-link">
-                      <i class="nav-icon fas fa-chart-pie" aria-hidden="true"></i>
-                      <p>All Report</p>
-                    </a>
-                  </li>
-                  <!-- admin only -->
-                  <?php if ($session->access == '3' and $session->email == 'malikmanan@unisza.edu.my') { ?>
-                    <li class="nav-item">
-                      <a href="<?= base_url("/complaint") ?>" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie" aria-hidden="true"></i>
-                        <p>All Complaint</p>
-                      </a>
-                    </li>
-                  <?php } else {
-                  } ?>
-                  <!-- eof -->
-                  <li class="nav-header">STAF</li>
-                  <li class="nav-item">
-                    <a href="<?= base_url("/managetech") ?>" class="nav-link">
-                      <i class="nav-icon far fa-plus-square" aria-hidden="true"></i>
-                      <p>+ Staf</p>
-                    </a>
-                  </li>
-                <?php } else {
-                }
-                ?>
-                <li class="nav-header">CONTACT US</li>
-                <li class="nav-item">
-                  <a href="<?= base_url("/contact") ?>" class="nav-link">
-                    <i class="nav-icon fas fa-question-circle" aria-hidden="true"></i>
-                    <p>Request/Complaint</p>
+                    <p>Report</p>
                   </a>
                 </li>
                 <li class="nav-header">INFO</li>

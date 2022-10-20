@@ -39,18 +39,89 @@
   </div>
 
   <!-- Main content -->
-  <section class="content hidden-pc">
+  <section class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg">
-          <a href="<?= base_url('/new') ?>">
-            <div class="small-box bg-white">
-              <div class="inner">
-                <h4>+ New Ticket</h4>
-                <!-- <small><i>*create new case</i></small> -->
-              </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">CPU Traffic</span>
+              <span class="info-box-number">
+                10
+                <small>%</small>
+              </span>
             </div>
-          </a>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">41,410</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="clearfix hidden-md-up"></div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">Sales</span>
+              <span class="info-box-number">760</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">New Members</span>
+              <span class="info-box-number">2,000</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header bg-dark">
+              <h3 class="card-title">Latest Asset</h3>
+            </div>
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped table-sm display nowrap">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>adasd</th>
+                    <th>adasd</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -97,25 +168,6 @@ if ($session->create) { ?>
     Toast.fire({
       icon: 'success',
       title: 'Welcome <?= $session->name ?>'
-    })
-  </script>
-<?php } elseif ($session->cancelsuccess) { ?>
-  <script>
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'center',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-
-    Toast.fire({
-      icon: 'info',
-      title: 'Cancel successfully! case completed!'
     })
   </script>
 <?php } elseif ($session->completed) { ?>
