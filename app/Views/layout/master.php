@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MyTask | ICT</title>
+  <title>Inventory System | ICT</title>
 
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -213,7 +213,7 @@
                 <li class="nav-item">
                   <a href="<?= base_url("/new") ?>" class="nav-link">
                     <i class="nav-icon fas fa-edit"></i>
-                    <p>+ Asset Reg</p>
+                    <p>Registration</p>
                     <span class="right badge badge-warning">New</span>
                   </a>
                 </li>

@@ -42,6 +42,9 @@ $routes->post('/auth', 'Login::auth');
 $routes->get('/logout', 'Login::logout');
 $routes->get('/home', 'Home::index', ['filter' => 'auth']); //filter home page from unauthorize access
 
+$routes->get('/new', 'NewController::index', ['filter' => 'auth']);
+$routes->post('/create', 'NewController::create', ['filter' => 'auth']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
